@@ -31,7 +31,7 @@ namespace Game
 	void CApp::Draw(void)
 	{
 		glClear(GL_COLOR_BUFFER_BIT);
-		glRectf(0, 0, 100, 100);
+		
 		glutSwapBuffers();
 	}
 
@@ -56,6 +56,11 @@ namespace Game
 	}
 
 	void CApp::PassiveMouse(int x, int y)
+	{
+
+	}
+
+	void CApp::Mouse(int button, int state, int x, int y)
 	{
 
 	}

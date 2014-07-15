@@ -9,6 +9,11 @@ static void SpecialKeyboard(int Key, int x, int y)
 	Callbacks->SpecialKeyboard(Key, x, y);
 }
 
+static void Mouse(int button, int state, int x, int y)
+{
+	Callbacks->Mouse(button, state, x, y);
+}
+
 static void Keyboard(unsigned char Key, int x, int y)
 {
 	Callbacks->Keyboard(Key, x, y);
@@ -36,6 +41,7 @@ static void InitCallbacks()
 	glutSpecialFunc(SpecialKeyboard);
 	glutPassiveMotionFunc(PassiveMouse);
 	glutKeyboardFunc(Keyboard);
+	glutMouseFunc(Mouse);
 }
 
 void GLUTBackendInit(int argc, char** argv)

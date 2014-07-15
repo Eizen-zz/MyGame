@@ -11,6 +11,7 @@ namespace Game
 			virtual void PassiveMouse(int x, int y) = 0;
 			virtual void Draw(void) = 0;
 			virtual void Idle(void) = 0;
+			virtual void Mouse(int button, int state, int x, int y) = 0;
 	};
 
 };
