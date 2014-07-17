@@ -2,18 +2,15 @@
 #define _RACKET_H
 
 #include "GameTypes.h"
-#include <vector>
-#include "TBullet.h"
 
 namespace Game
 {
 	class CRacket
 	{
 	private:
-		float x, y, w, h;
+		float x, y, _fWidth, _fHeight;
 		uint r, g, b;
-		std::vector<TBullet> _vBullets;
-		bool _bActive, _bPause, _bRacketLongBonus, _bRacketBoomBonus, _bLeftState;
+		bool _bActive, _bPause;
 	public:
 		CRacket();
 		~CRacket();
@@ -23,9 +20,6 @@ namespace Game
 		void SetState(bool State);
 		void SetColor(uint _r, uint _g, uint _b);
 		void SetPause(bool State);
-		void SetLongBonus(bool State);
-		void SetBoomBomus(bool State);
-		void SetLeftState(bool State);
 		bool GetState(void);
 		unsigned int GetWidth(void);
 	};

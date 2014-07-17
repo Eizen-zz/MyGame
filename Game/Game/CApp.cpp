@@ -1,4 +1,5 @@
 #include "CApp.h"
+#include <cmath>
 
 namespace Game
 {
@@ -31,7 +32,15 @@ namespace Game
 	void CApp::Draw(void)
 	{
 		glClear(GL_COLOR_BUFFER_BIT);
-		
+		//----------------------------------------------------
+		glColor3f(1, 1, 1);
+		glBegin(GL_TRIANGLE_FAN);
+		glVertex2f(400, 400);
+		glColor3f(0, 0.4, 0);
+		for (float i = 0; i < 2 * 3.14; i+= 3.14 / 36)
+			glVertex2f(400 + 50 * sin(i), 400 + 50 * cos(i));
+		glEnd();
+		//----------------------------------------------------
 		glutSwapBuffers();
 	}
 
